@@ -1,5 +1,7 @@
-package com.mendozacreations.listahermano
+package com.mendozacreations.listahermano.di
 
+import com.mendozacreations.listahermano.data.remote.HermanoAPI
+import com.mendozacreations.listahermano.data.repository.HermanoRepository
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module

@@ -20,6 +20,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
+import com.mendozacreations.listahermano.model.HermanoViewModel
 
 @Composable
 fun RegistroHermanoScreen (

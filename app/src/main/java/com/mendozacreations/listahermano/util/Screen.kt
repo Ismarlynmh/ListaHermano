@@ -1,4 +1,4 @@
-package com.mendozacreations.listahermano
+package com.mendozacreations.listahermano.util
 
 sealed class Screen(val route: String) {
     object RegistroHermanoScreen: Screen("RegistroHermanoScreen")

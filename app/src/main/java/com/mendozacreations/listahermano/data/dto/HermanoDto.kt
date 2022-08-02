@@ -1,4 +1,7 @@
-package com.mendozacreations.listahermano
+package com.mendozacreations.listahermano.data.dto
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)

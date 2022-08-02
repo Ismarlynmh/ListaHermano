@@ -1,6 +1,8 @@
-package com.mendozacreations.listahermano
+package com.mendozacreations.listahermano.data.repository
 
-import androidx.compose.ui.semantics.SemanticsProperties.Error
+import com.mendozacreations.listahermano.data.dto.HermanoDto
+import com.mendozacreations.listahermano.data.remote.HermanoAPI
+import com.mendozacreations.listahermano.util.Resource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException

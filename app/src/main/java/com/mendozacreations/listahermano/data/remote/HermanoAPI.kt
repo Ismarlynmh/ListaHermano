@@ -1,5 +1,6 @@
-package com.mendozacreations.listahermano
+package com.mendozacreations.listahermano.data.remote
 
+import com.mendozacreations.listahermano.data.dto.HermanoDto
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
