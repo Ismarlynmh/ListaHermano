@@ -11,6 +11,8 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.mendozacreations.listahermano.ui.screens.AsistenciaListScreen
+import com.mendozacreations.listahermano.ui.screens.RegistroAsistenciaScreen
 import com.mendozacreations.listahermano.ui.theme.ListaHermanoTheme
 import com.mendozacreations.listahermano.util.Screen
 import dagger.hilt.android.AndroidEntryPoint
@@ -40,14 +42,22 @@ fun MyApps() {
         ) {
             val navHostController = rememberNavController()
 
-            NavHost(navController = navHostController, startDestination = Screen.ListaHermanoScreen.route) {
+            NavHost(navController = navHostController, startDestination = Screen.ListaHermanoScreen.route)
+            {
                 composable(route = Screen.ListaHermanoScreen.route) {
                     ListaHermanoScreen(navHostController = navHostController)
                 }
                 composable(route = Screen.RegistroHermanoScreen.route){
                     RegistroHermanoScreen(navHostController = navHostController)
                 }
-            }
+                composable(route = Screen.AsistenciaListScreen.route) {
+                    AsistenciaListScreen(navHostController = navHostController)
+                }
+                composable(route = Screen.RegistroAsistenciaScreen.route) {
+                    RegistroAsistenciaScreen(navHostController = navHostController)
+                }
+
+                }
         }
     }
 }
