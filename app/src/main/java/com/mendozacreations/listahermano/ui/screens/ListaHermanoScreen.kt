@@ -1,5 +1,6 @@
 package com.mendozacreations.listahermano
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -11,8 +12,11 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.EditNote
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -65,27 +69,40 @@ fun ListaHermanoScreen(
 
 
         scaffoldState = ScaffoldState
-    ){it
+    ) {
+        it
+        Column(
+            modifier = Modifier.padding(8.dp).fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Top
+        ) {
 
-        val state = viewModel.state.value
+            Image(
+                painter = painterResource(id = R.drawable.ic_camino_neocatecumenal_logo_f1050b5f74_seeklogo_com__1_),
+                contentDescription = "Camino Neocatecumenal logo",
+                modifier = Modifier.size(100.dp)
+            )
+            Text(
+                text = "The commmunity, San Martín",
+                fontFamily = FontFamily.Companion.SansSerif,
+                fontWeight = FontWeight.Bold,
+                fontStyle = FontStyle.Italic,
+                fontSize = 15.sp,
+                modifier = Modifier.padding(top = 16.dp)
+            )
 
-        Column(modifier = Modifier.fillMaxSize()) {
-            LazyColumn(modifier = Modifier.fillMaxSize()) {
-                items(state.hermanos) { hermanos ->
-                    HermanoItem(hermano = hermanos, {})
+            val state = viewModel.state.value
+
+            Column(modifier = Modifier.fillMaxSize()) {
+                LazyColumn(modifier = Modifier.fillMaxSize()) {
+                    items(state.hermanos) { hermanos ->
+                        HermanoItem(hermano = hermanos, {})
+                    }
                 }
-            }
 
-            if (state.isLoading)
-                CircularProgressIndicator()
+                if (state.isLoading)
+                    CircularProgressIndicator()
+            }
         }
     }
-
-}/*
-@Preview
-@Composable
-private fun  PreviewHermList(){
-    ListaHermanoTheme{
-        ListaHermanoScreen()
-    }
-}*/
+}

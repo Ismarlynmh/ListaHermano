@@ -44,10 +44,9 @@ fun RegistroHermanoScreen (
             TopAppBar(
                 title = {
                     Text(
-                        text = "NEW ITEM",
+                        text = "New Item",
                         fontFamily = FontFamily.Default,
                         fontWeight = FontWeight.Black,
-                        fontStyle = FontStyle.Normal
                     )
                 },
                 navigationIcon = {
@@ -248,9 +247,8 @@ fun RegistroHermanoScreen (
                     modifier = Modifier.size(ButtonDefaults.IconSize)
                 )
                 Text("  SAVE",
-                    fontFamily = FontFamily.SansSerif,
+                    fontFamily = FontFamily.Default,
                     fontWeight = FontWeight.Black,
-                    fontStyle = FontStyle.Normal
                 )
             }
         }

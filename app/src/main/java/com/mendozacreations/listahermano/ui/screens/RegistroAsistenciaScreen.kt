@@ -20,6 +20,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
@@ -50,7 +52,9 @@ AsistenciaViewModel = hiltViewModel() ) {
 
     Scaffold(
         topBar = {
-            TopAppBar(title = { Text(text = "EDIT LIST") },
+            TopAppBar(title = { Text(text = "Edit Assistance",
+                fontFamily = FontFamily.Default,
+                fontWeight = FontWeight.Black) },
 
                 navigationIcon = {
                     IconButton(onClick = {
@@ -110,7 +114,9 @@ AsistenciaViewModel = hiltViewModel() ) {
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 20.dp)) {
-                Text(text = "SAVE")
+                Text(text = "SAVE",
+                    fontFamily = FontFamily.Default,
+                    fontWeight = FontWeight.Black,)
             }
         }
     }
